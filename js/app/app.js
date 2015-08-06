@@ -7,10 +7,10 @@
     app.run(appRun);
 
     function appConfig() {
-        console.log('Configuring application...');
+        console.log('Configuring application sapmuzicproject...');
     };
 
     function appRun() {
-        console.log('Application started...');
+        console.log('Application sapmuzicproject started...');
     };
 })();
