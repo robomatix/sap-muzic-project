@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var app = angular.module('sapmuzicproject.app', []);
+    var app = angular.module('sapmuzicproject.app', ['sapmuzicproject.controllers']);
 
     app.config(appConfig);
     app.run(appRun);
