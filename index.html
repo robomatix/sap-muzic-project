@@ -10,12 +10,21 @@
 <div ng-controller="SapmuzicprojectController">
     <h1 ng-bind="title"></h1>
     <h2>{{ title }}</h2>
+
+    <div id="todo-container" ng-controller="VideoListController">
+        <h2>My Todos</h2>
+        <ul>
+            <li ng-repeat="todo in todoList">{{ '#' + todo.id + ': ' + todo.title}}</li>
+        </ul>
+    </div>
+
 </div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 <script src="js/app/app.js"></script>
 <script src="js/app/controllers/sapmuzicprojectController.js"></script>
+<script src="js/app/controllers/videoListController.js"></script>
 
 </body>
 </html>
