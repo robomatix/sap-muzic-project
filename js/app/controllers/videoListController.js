@@ -7,8 +7,9 @@
 
     var controllers = angular.module('sapmuzicproject.controllers');
 
-    controllers.controller('VideoListController', function ($rootScope, $scope) {
-        $scope.videoListId = [90399590, 90413430, 90445673];// Probably will be in a config file later
+    controllers.controller('VideoListController', function ($rootScope, $scope,videoListId,baseJsonVideoUrl) {
+        $scope.baseJsonVideoUrl=baseJsonVideoUrl;
+        $scope.videoListId = videoListId;// From js/app/config/app.config.js
         $scope.videoList = [];
         getVideos();
 
@@ -18,7 +19,7 @@
             for (var i = 0; i < $scope.videoListId.length; i++) {
                 $scope.videoList.push({
                     id: i,
-                    videoId: $scope.videoListId[i]
+                    jsonVideoUrl: $scope.baseJsonVideoUrl+$scope.videoListId[i]
                 });
 
             }
