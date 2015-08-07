@@ -14,7 +14,7 @@
     <div id="todo-container" ng-controller="VideoListController">
         <h2>My Todos</h2>
         <ul>
-            <li ng-repeat="video in videoList">{{ '#' + video.id + ': ' + video.jsonVideoUrl}}</li>
+            <li ng-repeat="video in videoList"><a ng-href="{{video.jsonVideoUrl}}">Click here to access the jSon of the video : {{video.id}}</a></li>
         </ul>
     </div>
 
